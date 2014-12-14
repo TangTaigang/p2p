@@ -8,7 +8,7 @@
 			<result type="" name="fail" path="/xxxxx"></result>
 		</action>
 		<action name="abc" forward="/WEB-INF/xxx.jsp"></action>
-		
+		<action name="companyReport" forward="/WEB-INF/pages/backend/companyReport.jsp" />
 		-->
 		<action name="companyReport" forward="/WEB-INF/pages/backend/companyReport.jsp" />
 		<!-- 首页 -->
