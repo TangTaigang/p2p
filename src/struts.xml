@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<action-mappings>
+	<package name="default" namespace="">
+		
+		<!--
+		<action name="" classPath="" method="">
+			<result type="dispatcher" name="success" path="/WEB-INF/xxx.jsp"></result>
+			<result type="" name="fail" path="/xxxxx"></result>
+		</action>
+		<action name="abc" forward="/WEB-INF/xxx.jsp"></action>
+		
+		-->
+		<action name="companyReport" forward="/WEB-INF/pages/backend/companyReport.jsp" />
+		<!-- 首页 -->
+		<action name="index" classPath="com.itany.p2p.action.IndexAction" method="showIndex">
+			<result name="success" path="/WEB-INF/pages/index.jsp" />
+		</action>
+		
+		<!-- 用户登录 -->
+		<action name="login" classPath="com.itany.p2p.action.UserAction" method="login">
+			<result name="success" path="/WEB-INF/pages/backend/main.jsp" />
+			<result name="fail" path="/WEB-INF/pages/backend/login.jsp" />
+		</action>
+		
+		<!-- 融资产品管理 -->
+		<action name="productManage" classPath="com.itany.p2p.action.ProductAction" method="productManage">
+			<result name="success" path="/WEB-INF/pages/backend/productManage.jsp" />
+		</action>
+		
+		<action name="productAddDetail" classPath="com.itany.p2p.action.ProductAction" method="forwardPage">
+			<result name="success" path="/WEB-INF/pages/backend/productAdd.jsp" />
+		</action>
+		
+		<action name="productAdd" classPath="com.itany.p2p.action.ProductAction" method="productAdd">
+			<result name="success" path="productManage.do" />
+			<result name="fail" path="productManage.do" />
+		</action>
+		
+		
+		
+		<!-- 在线申请管理 -->
+		<action name="onlineApply" classPath="com.itany.p2p.action.ApplyyAction" method="onlineApply">
+			<result name="success" path="/WEB-INF/pages/backend/onlineApply.jsp" />
+		</action>
+		
+		<action name="onlineApplyDetail" classPath="com.itany.p2p.action.ApplyyAction" method="onlineApplyDetail">
+			<result name="success" path="/WEB-INF/pages/backend/onlineApplyDetail.jsp" />
+		</action>
+		
+		
+		<!-- 新闻管理 -->
+		<action name="newsManage" classPath="com.itany.p2p.action.NewsAction" method="showPage">
+			<result name="success" path="/WEB-INF/pages/backend/newsManage.jsp" />
+		</action>
+		
+		<action name="newsAddDetail" forward="/WEB-INF/pages/backend/newsAdd.jsp" />
+		
+		<action name="newsAdd" classPath="com.itany.p2p.action.NewsAction" method="newsAdd">
+			<result name="success" path="newsManage.do" />
+		</action>
+		
+		<action name="newsDetail" classPath="com.itany.p2p.action.NewsAction" method="newsDetail">
+			<result name="success" path="/WEB-INF/pages/backend/newsDetail.jsp" />
+		</action>
+		
+		<action name="newsModifyDetail" classPath="com.itany.p2p.action.NewsAction" method="newsModifyDetail">
+			<result name="success" path="/WEB-INF/pages/backend/newsModify.jsp" />
+		</action>
+		
+		<action name="newsModify" classPath="com.itany.p2p.action.NewsAction" method="newsModify">
+			<result name="success" path="newsManage.do" />
+		</action>
+		
+		<!-- 产品类型管理 -->
+		<action name="productTypeManage" classPath="com.itany.p2p.action.ProductTypeAction" method="showPage">
+			<result name="success" path="/WEB-INF/pages/backend/productTypeManage.jsp" />
+		</action>
+		
+		<action name="productTypeAdd" classPath="com.itany.p2p.action.ProductTypeAction" method="productTypeAdd">
+			<result name="success" path="productTypeManage.do" />
+		</action>
+		
+		<action name="productTypeModify" classPath="com.itany.p2p.action.ProductTypeAction" method="productTypeModify">
+			<result name="success" path="productTypeManage.do" />
+		</action>
+		
+		<action name="productTypeStatus" classPath="com.itany.p2p.action.ProductTypeAction" method="productTypeStatus">
+			<result name="success" path="productTypeManage.do" />
+		</action>
+		
+		
+		<!-- 贷款周期管理 -->
+		<action name="loanTimeManage" classPath="com.itany.p2p.action.LendingPeriodAction" method="showPage">
+			<result name="success" path="/WEB-INF/pages/backend/loanTimeManage.jsp" />
+		</action>
+		
+		<action name="lendingPeriodAdd" classPath="com.itany.p2p.action.LendingPeriodAction" method="lendingPeriodAdd">
+			<result name="success" path="loanTimeManage.do" />
+		</action>
+		
+		<action name="lendingPeriodModify" classPath="com.itany.p2p.action.LendingPeriodAction" method="lendingPeriodModify">
+			<result name="success" path="loanTimeManage.do" />
+		</action>
+		
+		<action name="lendingPeriodStatus" classPath="com.itany.p2p.action.LendingPeriodAction" method="lendingPeriodStatus">
+			<result name="success" path="loanTimeManage.do" />
+		</action>
+		
+		
+		<!-- 企业管理 -->
+		<action name="companyManage" classPath="com.itany.p2p.action.CompanyAction" method="showPage">
+			<result name="success" path="/WEB-INF/pages/backend/companyManage.jsp" />
+		</action>
+		
+		<action name="companyAddDetail" forward="/WEB-INF/pages/backend/companyAdd.jsp" />
+		
+		<action name="companyAdd" classPath="com.itany.p2p.action.CompanyAction" method="companyAdd">
+			<result name="success" path="companyManage.do" />
+		</action>
+		
+		<action name="companyModifyDetail" classPath="com.itany.p2p.action.CompanyAction" method="companyModifyDetail">
+			<result name="success" path="/WEB-INF/pages/backend/companyModify.jsp" />
+		</action>
+		
+		<action name="companyModify" classPath="com.itany.p2p.action.CompanyAction" method="companyModify">
+			<result name="success" path="companyManage.do" />
+		</action>
+		
+		<action name="companyDetail" classPath="com.itany.p2p.action.CompanyAction" method="companyDetail">
+			<result name="success" path="/WEB-INF/pages/backend/companyDetail.jsp" />
+		</action>
+		
+		<action name="companyDelete" classPath="com.itany.p2p.action.CompanyAction" method="companyDelete">
+			<result name="success" path="companyManage.do" />
+		</action>
+		
+	</package>
+</action-mappings>
